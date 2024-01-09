@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donor List</title>
+</head>
+<body>
+    <h1>Donor List</h1>
+    {% if donors %}
+        <ul>
+            {% for donor in donors %}
+                <li>{{ donor.name }} - blood: {{ donor.blood }} - address: {{ donor.address }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No donors found.</p>
+    {% endif %}
+</body>
+</html>

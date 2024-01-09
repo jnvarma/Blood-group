@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+    </style>
+
+</head>
+<body>
+    <title> user profile </title>
+    
+ {% load static %} 
+ <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">  
+ 
+<form action="" method="post" enctype="multi/form-data">
+{% csrf_token %}
+
+<h3 style="text-align:center; padding-bottom:20px; color:red; font-weight:bold;"> Blood registration </h3>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required><br><br>
+    
+<label for="phone">phone number:</label>
+<input type="tel" id="phone" name="phone" required><br><br>
+
+<label for="blood">Blood Group:</label>
+<select id="blood" name ="blood" required> 
+    <option value="select">--select--</option>
+    <option value="A+">A+(positive)</option>
+    <option value="A-">A-(negative)</option>
+    <option value="B+">B+(postive)</option>
+    <option value="B-">B-(negative)</option>
+    <option value="AB+">AB+(postive)</option>
+    <option value="AB-">AB-(negative)</option>
+    <option value="o+">o+(postive)</option>
+    <option value="o-">o-(negative)</option>
+    <option value="A1+">A1+(postive)</option>
+    <option value="A1-">A1-(negative)</option>
+    <option value="A1B+">A1B+(postive)</option>
+    <option value="A1B-">A1B-(negative)</option>
+    <option value="A2+">A2+(postive)</option>
+    <option value="A2-">A2-(nagative)</option>
+    <option value="A2B+">A2B+(postive)</option>
+    <option value="A2B-">A2B-(negative)</option>
+    <option value="Bombay blood group"> Bombay blood group</option>
+    <option value="INRA">INRA</option>
+    <option value="othsers">OTHERS</option>
+</select><br><br>
+
+
+<label for="address">district: </label>
+<select id="address" name="address" required>
+    <option value="select">--select--</option>
+    <option value="Adilabad">Adilabad</option>
+    <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
+    <option value="Kumuram Bheem">Kumuram Bheem</option>
+    <option value="Mancherial">Mancherial</option>
+    <option value="Nirmal">Nirmal</option>
+    <option value="Nizamabad">Nizamabad</option>
+    <option value="Jagitial">Jagitial</option>
+    <option value="Peddapalli">Peddapalli</option>
+    <option value="Kamareddy">Kamareddy</option>
+    <option value="Jayashankar Bhupalpally">Jayashankar Bhupalpally</option>
+    <option value="Hanamkonda">Hanamkonda</option>
+    <option value="	Hyderabad">	Hyderabad</option>
+    <option value="Jangaon">Jangaon</option>
+    <option value="Jogulamba Gadwal">Jogulamba Gadwal</option>
+    <option value="Karimnagar">Karimnagar</option>
+    <option value="Khammam">Khammam</option>
+    <option value="Mahabubabad">Mahabubabad</option>
+    <option value="Mahabubnagar">Mahabubnagar</option>
+    <option value="	Medak">Medak</option>
+    <option value="Medchal Malkajgiri">Medchal Malkajgiri</option>
+    <option value="Mulugu ">Mulugu </option>
+    <option value="	Nagarkurnool">Nagarkurnool</option>
+    <option value="Nalgonda ">Nalgonda </option>
+    <option value="	Narayanpet">Narayanpet</option>
+    <option value="	Rajanna Sircilla">Rajanna Sircilla</option>
+    <option value="	Rangareddy">Rangareddy</option>
+    <option value="Sangareddy">Sangareddy</option>
+    <option value="Siddipet">Siddipet</option>
+    <option value="Suryapet">Suryapet</option>
+    <option value="Vikarabad">Vikarabad</option>
+    <option value="Wanaparthy">Wanaparthy</option>
+    <option value="Warangal">Warangal</option>
+    <option value="Yadadri Bhuvanagiri">Yadadri Bhuvanagiri</option>
+    <option value="Srikakulam">Srikakulam</option>
+    <option value="Vizianagaram">Vizianagaram</option>
+    <option value="Parvathipuaram">Parvathipuaram</option>
+    <option value="kakinada">kakinada</option>
+    <option value="Amalapuramu">Amalapuramu</option>
+    <option value="Anakapalle">Anakapalle</option>
+    <option value="Visakhapatnam">Visakhapatnam</option>
+    <option value="Eluru">Eluru</option>
+    <option value="Machilipatanam,Krishna">Machilipatanam,Krishna</option>
+    <option value="Rajamahendravaram,East Godavari">Rajamahendravaram,East Godavari</option>
+    <option value="Guntur">Guntur</option>
+    <option value="Palnadu,Narasaraopet">Palnadu,Narasaraopet</option>
+    <option value="Bapatla">Bapatla</option>
+    <option value="Ongole">Ongole</option>
+    <option value="Vizayawada">Vizayawada</option>
+    <option value="Rayachoti,Annamayya">Rayachoti,Annamayya</option>
+    <option value="Kadapa">Kadapa</option>
+    <option value="Kurnool">Kurnool</option>
+    <option value="Puttaparthi">Puttaparthi</option>
+    <option value="Paderu,Alluri Sitarama Raju">Paderu,Alluri Sitarama Raju</option>
+    <option value="Chittoor">Chittoor</option>
+    <option value="Tirupati">Tirupati</option>
+    <option value="Ananthapuramu">Ananthapuramu</option>
+    <option value="Bhimavaram,West Godavari">Bhimavaram,West Godavari</option>
+    <option value="Nandyal">Nandyal</option>
+    <option value="others">others</option>
+    
+</select><br><br>
+
+<label for="availability">willing to give blood if someone needs it? :</label>
+<select id="availability" name="availability" required>
+    <option value="select">--select--</option>
+    <option value="yes">yes</option>
+    <option value="no">no</option>
+
+</select><br><br>
+
+<input style="text-align: center; display: block; margin: 0 auto; margin-top:15px; margin-bottom:10px; "type="submit" value="Submit Application">
+</form>
+
+
+</body>
+</html>
